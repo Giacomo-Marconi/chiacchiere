@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<head>
+    <title>chiacchiere test</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="script2.js"></script>
+    <meta charset="UTF-8">
+
+</head>
+
+<body onload="init();">
+
+    <nav>
+        <a class="flex"></a>
+        <p class="title">le chiacchiere</p>
+        <a class="flex"></a>
+    </nav>
+
+    <!--<form style="z-index: 9999;" method="POST" action="/php/insert.php">
+        <input id="testo" type="text" name="testo" placeholder=".....">
+        <button onclick="click2();" >invia</button>
+        <input type="submit" placeholder="Ciao">
+    </form>-->
+    
+    <div class="externalContainer">
+        <div class="container" id="container">
+        </div>
+    </div>
+    
+
+    <div class="post_grande" id="post_grande">
+        <p id="story" class="testo_grande"></p>
+        <button type="button" onclick="closePost();">x</button>
+    </div>
+
+
+    <!--prove Luca-->
+    <!----------------------------------------------------------------------------------------------->
+
+    <!--finestra per inserire una storia-->
+    <button type="button" class="btn_storia" onclick="openPopup();">+</button>
+    
+    <form class="popup" id="popup" method="POST" action="/php/insert.php">
+        <h2>Scrivi qui la tua storia</h2>
+        <input onchange="onchangeInpt();" id="storia" type="text" name="storia" placeholder="C'era una volta..">
+        <button type="submit" onclick="inviaStoria();">OK</button>
+        <button type="button" onclick="closeAll();">Annulla</button>
+    </form>
+
+    <div class="sfocatura" id="sfocatura" onclick="closeAll();"></div>
+
+
+    <!--finestra info sul capitolo-->
+    <button type="button" class="btn_info" onclick="openInfo();">i</button>
+
+    <div class="info" id="info">
+        <h2>Perchè questo sito</h2>
+        <p>Questo sito è stato creato per raccogliere le storie delle persone, affinché non vengano dimenticate e ognuno di noi possa sentirsi ascoltato....</p>
+        <button type="button" onclick="closeAll();">x</button>
+    </div>
+
+
+
+    <!--non capisco perchè se lo scrivo in Java non funziona, mi diche cannot read properties of null relativo al comando classList-->
+    <script>
+
+    
+
+    </script>
+   
+
+
+
+
+    <!----------------------------------------------------------------------------------------------->
+
+
+
+<!--<div class="contenitore">
+            <div class="ombra">
+                
+            </div>
+            <div class="quadrato">
+                    <p id="pippo" class="testo">mammajfe                  hqdajshadfj  </p>
+            </div>
+        </div>
+
+        <div class="contenitore">
+            <div class="ombra">
+                <div class="quadrato">
+                    <p class="testo">What all of these have in common is that they're pulling information out of the app or the service and making it relevant to the moment. </p>
+                </div>
+            </div>
+        </div>
+        <div class="contenitore">
+            <div class="ombra">
+                <div class="quadrato">
+                    <p class="testo">What all of these have in common is that they're pulling information out of the app or the service and making it relevant to the moment. </p>
+                </div>
+            </div>
+        </div>
+        <div class="contenitore">
+            <div class="ombra">
+                <div class="quadrato">
+                    <p class="testo">What all of these have in common is that they're pulling information out of the app or the service and making it relevant to the moment. </p>
+                </div>
+            </div>
+        </div>
+        <div class="contenitore">
+            <div class="ombra">
+                <div class="quadrato">
+                    <p id="test" class="testo">What all of these have in common is that they're pulling information out of the app or the service and making it relevant to the moment. </p>
+                </div>
+            </div>
+        </div>-->
+
+
+
+
+
+
+</body>
