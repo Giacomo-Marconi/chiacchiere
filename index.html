@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <head>
     <title>chiacchiere test</title>
-    <link rel="stylesheet" href="styletest.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="style2.css">
+    <script src="script2.js"></script>
+    <meta charset="UTF-8">
 </head>
 
 <body onload="init();">
@@ -19,59 +20,15 @@
         <input type="submit" placeholder="Ciao">
     </form>-->
     
-
-    <div class="container" id="container">
-
-
-        <div class="contenitore">
-            <div class="ombra">
-                <div class="quadrato">
-                    <p id="pippo" class="testo">mammajfe  </p>
-            </div>
+    <div class="externalContainer">
+        <div class="container" id="container">
         </div>
-
-        <!--<div class="contenitore">
-            <div class="ombra">
-                <div class="quadrato">
-                    <p id="pippo" class="testo">mammajfe                  hqdajshadfj  </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="contenitore">
-            <div class="ombra">
-                <div class="quadrato">
-                    <p class="testo">What all of these have in common is that they're pulling information out of the app or the service and making it relevant to the moment. </p>
-                </div>
-            </div>
-        </div>
-        <div class="contenitore">
-            <div class="ombra">
-                <div class="quadrato">
-                    <p class="testo">What all of these have in common is that they're pulling information out of the app or the service and making it relevant to the moment. </p>
-                </div>
-            </div>
-        </div>
-        <div class="contenitore">
-            <div class="ombra">
-                <div class="quadrato">
-                    <p class="testo">What all of these have in common is that they're pulling information out of the app or the service and making it relevant to the moment. </p>
-                </div>
-            </div>
-        </div>
-        <div class="contenitore">
-            <div class="ombra">
-                <div class="quadrato">
-                    <p id="test" class="testo">What all of these have in common is that they're pulling information out of the app or the service and making it relevant to the moment. </p>
-                </div>
-            </div>
-        </div>-->
-        
     </div>
+    
 
     <div class="post_grande" id="post_grande">
         <p id="story" class="testo_grande"></p>
-        <button type="button" onclick="closePost();">x</button>
+        <!--<button type="button" onclick="closePost();">x</button>-->
     </div>
 
 
@@ -79,45 +36,91 @@
     <!----------------------------------------------------------------------------------------------->
 
     <!--finestra per inserire una storia-->
-    <button type="button" class="btn_storia" onclick="openPopup();">+</button>
+    <!--<button type="button" class="btn_storia" onclick="openPopup();">+</button>-->
+    <img src="add.svg" class="btn_storia" onclick="openPopup();" on>
     
-    <form class="popup" id="popup" method="POST" action="/php/insert.php">
-        <h2>Scrivi qui la tua storia</h2>
-        <input id="storia" type="text" name="storia" placeholder="C'era una volta..">
-        <button type="submit" onclick="inviaStoria();">OK</button>
-        <button type="button" onclick="closePopup();">Annulla</button>
-    </form>
+    <div class="cont_popup_storia" id="cont_popup_storia">
+        <div class="colonna_colori"></div>
+        <form class="popup" id="popup" method="POST" action="/php/insert.php">
+            <h2>Scrivi qui la tua storia</h2>
+            <input type="hidden" id="colore" name="colore" value="0">
+            <textarea class="inpText" id="storia" type="text" name="storia" placeholder="C'era una volta.." rows="30" cols="100"></textarea>
+            <button class="insert_botton" id="addStory" type="submit" onclick="inviaStoria();">Ok</button>
+            <button class="insert_botton but_left" type="button" onclick="closeAll();" style="margin-left: 20px;">Annulla</button>
+            <!--<input type="hidden" id="colore" name="colore" value="0">
+            <button class="scelta_colore" type="button" onclick="change_color(0);" style="background-color:#CBE4F9">A</button>
+            -->
+        </form>
+        <div class="colonna_colori">
+            
+            <button class="scelta_colore" id="butt_0" type="button" onclick="change_color(0);" style="background-color:#CBE4F9"></button>
+            &emsp;
+            <button class="scelta_colore" id="butt_1" type="button" onclick="change_color(1);" style="background-color:#CDF5F6"></button>
+            &emsp;
+            <button class="scelta_colore" id="butt_2" type="button" onclick="change_color(2);" style="background-color:#EFF9DA"></button>
+            &emsp;
+            <button class="scelta_colore" id="butt_3" type="button" onclick="change_color(3);" style="background-color:#F9EBDF"></button>
+            &emsp;
+            <button class="scelta_colore" id="butt_4"type="button" onclick="change_color(4);" style="background-color:#F9D8D6"></button>
+            <!--&emsp;
+            <button class="scelta_colore" id="butt_5" type="button" onclick="change_color(5);" style="background-color:#F9D8D6"></button>
+            -->
+        </div>
+    </div>
 
-    <div class="sfocatura" id="sfocatura"></div>
-
+    <div class="sfocatura" id="sfocatura" onclick="closeAll();"></div>
 
     <!--finestra info sul capitolo-->
-    <button type="button" class="btn_info" onclick="openInfo();">i</button>
+    <!--<button type="button" class="btn_info" onclick="openInfo();">i</button>-->
+    <img src="info.svg" class="btn_info" onclick="openInfo();">
 
     <div class="info" id="info">
-        <h2>Perchè questo sito</h2>
-        <p>Questo sito è stato creato per raccogliere le storie delle persone, affinché non vengano dimenticate e ognuno di noi possa sentirsi ascoltato....</p>
-        <button type="button" onclick="closeInfo();">x</button>
+        <h2>Perchè questo sito?</h2>
+            <p class="fattaore">
+                Quest’anno, noi clan Zenit del gruppo Valpolicella 1, ci siamo concentrati sul tema 
+                dell’ascolto, raccogliendo alcune testimonianze di coloro che avevano bisogno di 
+                liberarsi di un pensiero. 
+                Abbiamo capito che l’ascolto è un'abilità preziosa che spesso trascuriamo.
+                 <br>  È più di un semplice atto fisico; richiede empatia, comprensione e rispetto. 
+                 <br>Quando veramente ascoltiamo gli altri, creiamo connessioni più profonde e 
+                 costruiamo relazioni più significative.<br> Non si tratta solo di sentire le parole, 
+                 ma di comprendere il messaggio e il contesto emotivo dietro di esse. 
+                 <br>In un mondo in cui si parla così tanto, imparare ad ascoltare è un atto 
+                 di gentilezza e di vera comunicazione.
+            </p>
+        <button type="button" onclick="closeAll();">x</button>
+    </div>
+     
+    <div class="popup_ingresso" id="popup_ingresso">
+        <h2>Cos'è questo sito?</h2> 
+            <p>
+                Questo sito è stato creato per raccogliere le storie delle persone,
+                affinché non vengano dimenticate e ognunoss possa sentirsi ascoltato. Per avere più informazioni a questo riguardo basta schiacciare il 
+                pulsante col simbolo "info" posizionato in basso a destra dello schermo.
+            </p>
+        <br>
+        <img src="foto_info.jpg" style= "position: relative; width: 250px; height: 160px;" >
+        <br><br>
+        <p>Per aggiungere la tua storia clicca sul pulsante col simbolo "+" situato in basso a destra al di sopra del pulsante info.</p>
+        <br>
+        <p>Per uscire da questa finestra basta cliccare una parte qualunque esterna dello schermo</p>
+        <!--<button type="button" onclick="closeAll();">x</button>-->
     </div>
 
 
-
-    <!--non capisco perchè se lo scrivo in Java non funziona, mi diche cannot read properties of null relativo al comando classList-->
-    <script>
-
-    
-
-    </script>
-   
+<!----------------------------------------------------------------------------------------------->
 
 
 
-
-    <!----------------------------------------------------------------------------------------------->
-
-
-
-
+<!--
+        <div class="contenitore">
+            <div class="ombra">
+                <div class="quadrato">
+                    <p id="test" class="testo">What all of these have in common is that they're pulling information out of the app or the service and making it relevant to the moment. </p>
+                </div>
+            </div>
+        </div>
+-->
 
 
 

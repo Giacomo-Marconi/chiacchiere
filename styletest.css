@@ -31,6 +31,10 @@ nav{
     z-index: 10;
 }
 
+.fattaora{
+    text-align: justify;
+}
+
 .title{
     font-size: 4.5vw;
     font-weight: 800;

@@ -20,7 +20,8 @@ while($row = $result->fetch_assoc()) {
     $temp=array();
 
     $temp['testo'] = $row['testo'];
-    $temp['autore']=$row['autore'];
+    $temp['id']=$row['id'];
+    $temp['color']=$row['colore'];
 
     $post[] = $temp;
 }
