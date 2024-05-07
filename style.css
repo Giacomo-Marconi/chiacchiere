@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
 
-p{
-    font-family: 'Ubuntu Sans Mono', monospace;
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Merienda:wght@300..900&display=swap');
+/*---------------------------GENERAL--------------------------------------------------*/
+
+p {
+    font-family: 'Ubuntu Sans Mono', monospace !important;
 }
 
 body{
     margin-top:20px;
+    font-family: 'Ubuntu Sans Mono', monospace;
 }
 
 
@@ -16,17 +20,12 @@ p{
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-}
-/*nav bar*/
-.flex{
-    width: 50px;
-    display: flex;
-    flex-direction: row-reverse;
+    font-family: 'Ubuntu Sans Mono', monospace;
 }
 
 nav{
     /*background-color: #b25825;*/
-    background-image: url(cartello.png);
+    background-image: url(img/cartello.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     display: flex;
@@ -45,10 +44,22 @@ nav{
     z-index: 10;
 }
 
+
+/*-----------------------NAV-BAR------------------------------------------------------*/
+.flex{
+    width: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+
+
 .title{
-    font-family: "Poetsen One", sans-serif;
-    font-weight: 400;
-    font-size: 4.5vw;
+    /*font-family: "Poetsen One", sans-serif;*/
+    /*font-family: "Great Vibes", cursive !important;*/
+    font-family: "Merienda", cursive !important;
+    font-weight: 600;
+    font-size: 4vw;
     font-weight: 800;
     color: rgb(0, 0, 0);
     margin-top: 15px;
@@ -56,6 +67,8 @@ nav{
     text-transform: uppercase;
     font-family: cursive;
 }
+
+/*-----------------------CONTANER-POST-IT--------------------------------------------------*/
 
 .externalContainer{
     width: auto;
@@ -72,7 +85,9 @@ nav{
     /*border: solid #252422;*/
 }
 
-/*------------------------*/
+/*-----------------------POST-IT------------------------------------------------*/
+
+
 .contenitore{
     width: 300px;
     height: 300px;
@@ -127,39 +142,23 @@ nav{
 
 }
 
-/*-------------------*/
-
-/*dimensione max carta*/
-.card-big-shadow {
-    max-width: 320px;
-    position: relative;
-}
-
-/*testo e descrizione*/
-.card .content {
-    padding: 20px 20px 10px 20px;
-}
-
-
-.card {
-    border-radius: 8px;
-    box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
-    background-color: #FFFFFF;
-    color: #252422;
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 1;
-}
-
+/*-------------------------------TEXT-AREA------------------------------------------------------*/
 
 textarea{
     resize: none;
 }
-/*--prove Luca--*/
-/*-------------------------------------------------------------------------------------*/
 
-/*finestra aggiungi storia/*
-/*-------------------------------------------------------------------------------------***/
+#storia{
+    font-family: 'Ubuntu Sans Mono', monospace;
+    height: 200px;
+    width: 95%;
+    font-size: 20px;
+    text-align: start;
+    color: black;
+}
+
+
+/*---------------------BOTTONE-AGGIUNGI-STORIA---------------------------------------------------------------*/
 .btn_storia{
     position: fixed;
     right: 50px;
@@ -180,6 +179,8 @@ textarea{
     color: white;
     z-index: 99;
 }
+
+/*---------------------------FINESTRA-AGGIUGi-STORIA----------------------------------------------------------*/
 
 .cont_popup_storia{
     position: fixed;
@@ -223,7 +224,7 @@ textarea{
     border: black solid 5px;
 }
 
-
+/*-------------------------INPUT-STORIA-----------------------------------------------*/
 
 .popup{
     position: relative;
@@ -270,14 +271,7 @@ textarea{
 }
 
 
-#storia{
-    font-family: 'Ubuntu Sans Mono', monospace;
-    height: 200px;
-    width: 100%;
-    font-size: 20px;
-    text-align: start;
-    color: black;
-}
+/*-------------------------FONDO-SFOCATURA----------------------------------------------*/
 
 .sfocatura{
     position: fixed;
@@ -295,8 +289,8 @@ textarea{
 }
 
 
-/*finestra info*/
-/*-------------------------------------------------------------------------------------*/
+
+/*---------------------------FINESTRA-INFO---------------------------------------------------------*/
 
 .btn_info{
     position: fixed;
@@ -320,18 +314,7 @@ textarea{
     z-index: 98;
 }
 
-.btn_info:hover{
-    background-color: rgba(255, 255, 255, 0.7);
-}
 
-.btn_storia:hover{
-    background-color: rgba(255, 255, 255, 0.7);
-}
-
-.scelta_colore:hover{
-    background-color: rgba(255, 255, 255, 0.7);
-    border: black solid 5px;
-}
 
 .info{
     position: fixed;
@@ -353,6 +336,10 @@ textarea{
     visibility: visible;
     transform: translate(-50%,-50%) scale(1);
     z-index: 100;
+}
+
+.testoJustify{
+    text-align: justify;
 }
 
 .info h2{
@@ -381,7 +368,22 @@ textarea{
     cursor: pointer;
 }
 
-/*-------------------------------------------------------------------------------------*/
+
+/*---------------------------PASSAGGIO-MOUSE-SU-BOTTONI--------------------------------------------------------*/
+.btn_info:hover{
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.btn_storia:hover{
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.scelta_colore:hover{
+    background-color: rgba(255, 255, 255, 0.7);
+    border: black solid 5px;
+}
+
+/*-------------------------POST-IT-GRANDE-----------------------------------------------------------*/
 
 .post_grande{
     padding: 25px;
@@ -435,8 +437,46 @@ textarea{
 
 
 
+/*------------------------------FOOTER-------------------------------------------------------*/
+.container_contatti{
+    position: static;
+    height: 80px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+}
 
-/*scroll bar*/
+.btn_ig{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.griglia_contatti{
+    display: grid;
+    grid-template-rows: auto 1fr 1fr;
+    grid-template-columns: 1fr;
+    font-size: 1.1em;
+    font-weight: 400;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.cella_sopra{
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.cella_sotto{
+    grid-row-start: 2;
+    grid-row-end: 2;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+
+/*-----------------------------SCROLL-BAR------------------------------------------------*/
 ::-webkit-scrollbar {
     width: 1vw;
 }
@@ -461,6 +501,37 @@ textarea{
     border-radius: 10px;
 }
 
+
+/*---------------------------POPUP-INGRESSO--------------------------------------------------*/
+
+.popup_ingresso{
+    position: fixed;
+    width: 500px;
+    height: 430px;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    border-radius: 6px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color-scheme: #333;
+    visibility: hidden;
+    z-index: 100;
+}
+
+.close_popup_ingresso{
+    visibility: hidden;
+    transform: translate(-50%,-50%) scale(0);
+    transition: transform 0.4s;
+}
+
+
+
+/*---------------------------VISUALIZZAZIONE-DA-CELLULARE--------------------------------------------------*/
+
+/*------------------------TELEFONO-VERTICALE--------------------------*/
 @media screen and (max-width: 1000px){
     /*diminuita altezza cartello*/
     nav{
@@ -470,7 +541,7 @@ textarea{
     }
 
     .title{
-        font-size: 4.5em;
+        font-size: 4em;
     }
      /*ingrandito testo*/
     .testo{
@@ -480,7 +551,7 @@ textarea{
     }
 
     #storia{
-        font-size: 3.5em;
+        font-size: 3em;
         height: 650px;
     }
 
@@ -494,6 +565,12 @@ textarea{
         font-size: 35px;
     }
 
+
+    .scelta_colore{
+        height: 70px;
+        width: 70px;
+        border-radius: 35px;
+    }
     
     /*ingrandito*/
     .post_grande{
@@ -531,6 +608,7 @@ textarea{
     }
 
     .info{
+        top: 30%;
         width: 80%;
         height: 50%;
     }
@@ -564,6 +642,8 @@ textarea{
     }
 }
 
+
+/*------------------------TELEFONO-ORRIZONTALE--------------------------*/
 @media screen and (max-height: 500px){
     nav{
         height: 110px;
@@ -601,30 +681,4 @@ textarea{
 
 
 
-.fattaore{
-    text-align: justify;
-}
-
-.popup_ingresso{
-    position: fixed;
-    width: 500px;
-    height: 430px;
-    background-color: rgba(0,0,0,0.7);
-    color: white;
-    border-radius: 6px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%) scale(1);
-    text-align: center;
-    padding: 0 30px 30px;
-    color-scheme: #333;
-    visibility: hidden;
-    z-index: 100;
-}
-
-.close_popup_ingresso{
-    visibility: hidden;
-    transform: translate(-50%,-50%) scale(0);
-    transition: transform 0.4s;
-}
 
