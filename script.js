@@ -7,7 +7,7 @@ let popup;
 
 
 function init() {      
-    fetch("http://chiacchiere.figliolo.it/php/getData.php")
+    fetch("https://t.figliolo.it/php/getData.php")
         .then(response => response.json())
         .then(data => {
             array = data;
@@ -18,17 +18,17 @@ function init() {
     sfocatura= document.getElementById("sfocatura");
     popup = document.getElementById("popup");
 
-    if(!foundCookie("first")) {
-        const popIngresso = document.getElementById("popup_ingresso");
-        popIngresso.style.visibility = "visible";
+    // if(!foundCookie("first")) {
+    //     const popIngresso = document.getElementById("popup_ingresso");
+    //     popIngresso.style.visibility = "visible";
         
-        sfocatura.classList.add("sfocatura_on");
+    //     sfocatura.classList.add("sfocatura_on");
 
-        var scadenza = new Date();
-        scadenza.setDate(scadenza.getDate() + 9999); // Scadenza tra 7 giorni
-        document.cookie = "first=1; expires=" + scadenza.toUTCString();
-        //console.log(scadenza.toUTCString());
-    }
+    //     var scadenza = new Date();
+    //     scadenza.setDate(scadenza.getDate() + 9999); // Scadenza tra 7 giorni
+    //     document.cookie = "first=1; expires=" + scadenza.toUTCString();
+    //     //console.log(scadenza.toUTCString());
+    // }
 }
 
 
@@ -164,7 +164,7 @@ function closeAll() {
     cont_popup_storia.classList.remove("openpopup");
     info.classList.remove("openinfo");
     sfocatura.classList.remove("sfocatura_on");
-    popup_ingresso.classList.add("close_popup_ingresso")
+    // popup_ingresso.classList.add("close_popup_ingresso")
     document.getElementById("storia").value="";
 }
 
