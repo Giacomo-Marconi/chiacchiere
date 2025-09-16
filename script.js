@@ -140,7 +140,7 @@ function inviaStoria() {
     storia = input.value;
     //pippo.innerHTML = storia;
     //console.log(tx);
-    createPostIt(storia);
+    //createPostIt(storia);
     closePopup();
     //document.getElementById("storia").value = "";
 }
